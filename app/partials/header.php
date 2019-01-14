@@ -9,15 +9,15 @@
   <div class="collapse navbar-collapse" id="navbar-links">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href="./home.php">Home</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="#">Catalog</a>
+        <a class="nav-link" href="./catalog.php">Catalog</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="#">Cart
+        <a class="nav-link" href="./cart.php">Cart
           <span class="badge badge-danger text-light" id="cart-count">
 
             <?php
@@ -41,11 +41,11 @@
       <?php  } else {?>
 
       <li class="nav-item">
-        <a class="nav-link" href="../views/login.php">Login</a>
+        <a class="nav-link" href="./login.php">Login</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href="./register.php">Register</a>
       </li>
 
     <?php } ?>

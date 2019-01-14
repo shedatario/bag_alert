@@ -3,9 +3,9 @@
 <?php  function get_page_content() { 
 
 
- require_once '../controllers/connect.php';
+	 // require_once '../controllers/connect.php';
 
-	// global $conn; //connects to the $conn outside the function
+	global $conn; //connects to the $conn outside the function
 
 	
 ?>

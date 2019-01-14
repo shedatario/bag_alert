@@ -166,14 +166,81 @@ $(document).ready( function (){
 			"method" : "POST",
 			"data" : {
 				'item_id' : item_id,
-				'item_quantity' : item_quantity
+				'item_quantity' : item_quantity,
+				'update_from_cart_page': 0
 			},
 			"success" : (data) => {
 				$("#cart-count").html(data);
 			} //end success data
-
-		}); //end ajax
 		
+		}); //end ajax
+
 	}); //end document add-to-cart
+
+
+		// get Total
+		function getTotal(){
+			let total = 0;
+			$(".item_subtotal").each(function(e){
+				total += parseFloat($(this).html());
+			});
+			$("#total_price").html(total.toFixed(2));
+		}
+
+		//edit cart
+		$(".item_quantity > input").on("input", function(e) {
+
+			let item_id = $(e.target).attr('data-id');
+			let quantity = parseInt($(e.target).val());
+			// console.log(quantity);
+			let price = parseFloat ($(e.target).parents('tr').find(".item_price").html());
+			// console.log(price);
+			subTotal = quantity * price;
+			$(e.target).parents('tr').find('.item_subtotal').html(subTotal.toFixed(2));
+
+			getTotal();
+
+			$.ajax({
+				"method" : "POST",
+				"url" : "../controllers/update_cart.php",
+				"data" : {
+					'item_id':item_id,
+					'item_quantity' : quantity,
+					'update_from_cart_page': 1
+				},
+				"success": (data) => {
+					$("#cart-count").html(data);
+				}
+
+			}); //end ajax
+
+		}); //end of on input
+
+
+		//delete button
+		$(document).on("click", '.item_remove', (e) =>{
+			e.preventDefault();
+			e.stopPropagation();
+
+			let item_id = $(e.target).attr('data-id');
+
+			$.ajax({
+				"method": "POST",
+				"url": "../controllers/update_cart.php",
+				"data": {
+					'item_id': item_id,
+					'item_quantity': 0
+				},
+				"beforeSend": () => {
+					return confirm("Are you sure you want to delete?");
+				},
+				"success": (data) => {
+					$(e.target).parents('tr').remove();
+					$('#cart-count').html(data);
+					getTotal();
+					window.location.replace("../views/cart.php");
+				}
+			}); //end of ajax
+		}); //end of document on click delete button
 
 }); //end document
