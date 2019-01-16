@@ -17,7 +17,7 @@
 
  	<h1>Hello, welcome to your checkout page</h1>
 
- 	<form method = "POST" action="../controller/placeholder.php">
+ 	<form method = "POST" action="../controllers/placeorder.php">
  		<div class="container mt-4">
  			<div class="row">
  				<div class="col-8">

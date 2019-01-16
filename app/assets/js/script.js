@@ -243,4 +243,17 @@ $(document).ready( function (){
 			}); //end of ajax
 		}); //end of document on click delete button
 
+
+
+
+		//submit profile form updates
+		$('#update_info').click( () =>{
+			// alert("asd");
+			$('#update_user_details').submit();
+		});
+
+
+
+
+
 }); //end document
