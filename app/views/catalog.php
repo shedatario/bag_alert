@@ -18,7 +18,7 @@
 			<!-- categories -->
 			<div class="col-sm-2 mt-3">
 				<h2> Categories </h2>
-				<ul class="list-group border">
+				<ul class="list-group">
 					<a href="catalog.php" class="text-dark">
 						<li class="list-group-item bg-info">All</li>
 					</a>
@@ -39,7 +39,7 @@
 
 			<!-- sorting -->
 			<h2 class="mt-3">Sort</h2>
-			<ul class="list-group border">
+			<ul class="list-group">
 				<a class = "text-dark" href="../controllers/sort.php?sort=asc">
 					<li class="list-group-item bg-info mt-1">
 						Price(lowest to highest)

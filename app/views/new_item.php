@@ -16,14 +16,17 @@
 				<div class="form-group">
 					<label for = "name">Name:</label>
 					<input type="text" name="name" class="form-control" id = "name" required>
+					<span class="validation"></span>
 				</div>
 				<div class="form-group">
 					<label for = "price">Price:</label>
 					<input type="text" name="price" class="form-control" id = "price" min="1" required>
+					<span class="validation"></span>
 				</div>
 				<div class="form-group">
 					<label for = "description">Description:</label>
 					<textarea type="text" name="description" class="form-control col-8" id = rows = "5" name = "description" required></textarea> 
+					<span class="validation"></span>
 				</div>
 				<div class="form-group">
 					<label for = "name">Category:</label>
