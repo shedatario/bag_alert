@@ -27,19 +27,19 @@
 								<input type="text" class="form-control" id="username" name="username" value="<?php echo $user['username']; ?>" disabled>
 								<span class="validation"></span><br>
 
-								<label for="firstname">First Name</label>
+								<label for="firstname">First Name:</label>
 								<input type="text" class="form-control" id="firstname" name="firstname" value="<?php echo $user['firstname']; ?>">
 								<span class="validation"></span><br>
 
-								<label for="lastname">Last Name</label>
+								<label for="lastname">Last Name:</label>
 								<input type="text" class="form-control" id="lastname" name="lastname" value="<?php echo $user['lastname']; ?>">
 								<span class="validation"></span><br>
 								
-								<label for="email">E-mail Address</label>
+								<label for="email">Email Address:</label>
 								<input type="text" class="form-control" id="email" name="email" value="<?php echo $user['email']; ?>">
 								<span class="validation"></span><br>
 								
-								<label for="address">Address</label>
+								<label for="address">Address:</label>
 								<input type="text" class="form-control" id="address" name="address" value="<?php echo $user['address']; ?>">
 								<span class="validation"></span><br>
 								

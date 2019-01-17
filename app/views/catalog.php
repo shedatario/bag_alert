@@ -2,7 +2,7 @@
 
 <?php  function get_page_content() { 
 
-
+if(!isset($_SESSION['user']) || isset($_SESSION['user']) && $_SESSION['user']['roles_id']==2){
 	 // require_once '../controllers/connect.php';
 
 	global $conn; //connects to the $conn outside the function
@@ -115,9 +115,11 @@
 
 	</div> <!-- end container -->
 
+<?php  }else{
+	header('location: ./error.php');
+	} ?>
 
 
 
 
-
-<?php } ?>
+<?php }; ?>

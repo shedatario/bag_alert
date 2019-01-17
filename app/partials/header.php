@@ -1,56 +1,70 @@
+
+
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand" href="#"> Store </a>
 
-  <a class="navbar-brand" href="">Store</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <div id="navbar-nav" class="collapse navbar-collapse">
+      <ul class="navbar-nav ml-auto">
+        <?php 
 
-  <div class="collapse navbar-collapse" id="navbar-links">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="./home.php">Home</a>
-      </li>
+          if(!isset($_SESSION['user']) || (isset($_SESSION['user'])) && ($_SESSION['user']['roles_id'] ==2)) {
+        ?>
 
-      <li class="nav-item">
-        <a class="nav-link" href="./catalog.php">Catalog</a>
-      </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./home.php"> Home </a>
+        </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="./cart.php">Cart
-          <span class="badge badge-danger text-light" id="cart-count">
+        <li class="nav-item">
+          <a class="nav-link" href="./catalog.php"> Catalog </a>
+        </li>
 
+        <li class="nav-item">
+          <a class="nav-link" href="./cart.php"> Cart <span class="badge bg-light text-dark" id="cart-count">
             <?php
-              if(isset($_SESSION['cart'])){
+              if (isset($_SESSION['cart'])) {
                 echo array_sum($_SESSION['cart']);
-              }else{
+              } else {
                 echo 0;
               }
-            ?>
+             ?>
+          </span> </a>
+        </li>
 
-          </span>
-        </a>
-      </li>
+      <?php } elseif(isset($_SESSION['user']) && ($_SESSION['user']['roles_id']==1)) { ?>
 
-      <?php if(isset($_SESSION['user'])) { ?>
+        <li class="nav-item">
+          <a href="./items.php" class="nav-link">Items</a>
+        </li>
+        
+      <?php }; ?>
 
-      <li class="nav-item">
-        <a class="nav-link" href="../controllers/logout.php">Logout</a>
-      </li>
+        <?php if(isset($_SESSION['user'])) { ?>
 
-      <?php  } else {?>
+        <li class="nav-item">
+          <a class="nav-link" href="./profile.php">Welcome, <?php echo $_SESSION['user']['firstname']; ?> </a>
+        </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="./login.php">Login</a>
-      </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../controllers/logout.php"> Logout </a>
+        </li>
 
-      <li class="nav-item">
-        <a class="nav-link" href="./register.php">Register</a>
-      </li>
+        <?php } else { ?>
 
-    <?php } ?>
+        <li class="nav-item">
+          <a class="nav-link" href="./login.php"> Login </a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="./register.php"> Register </a>
+        </li>
 
-    </ul>
-  </div>
-  
-</nav>
+        <?php }; ?>
+
+
+      </ul>
+    </div> <!-- end navbar nav -->
+  </nav> <!-- end nav -->

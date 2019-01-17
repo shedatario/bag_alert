@@ -2,7 +2,7 @@
 
 
 <?php function get_page_content(){
-
+	if(isset($_SESSION['user']) && $_SESSION['user']['roles_id']==1){
 }  ?>
 
 
@@ -58,3 +58,10 @@
 		</div> <!-- end 8 col -->
 	</div> <!-- end row --> 
 </div> <!-- end container -->
+
+<?php }else{
+	header('location: ./error.php');
+
+
+ 
+	}; ?>
