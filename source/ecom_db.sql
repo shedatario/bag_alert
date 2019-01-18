@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 17, 2019 at 09:19 AM
+-- Generation Time: Jan 18, 2019 at 03:39 AM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.11
 
@@ -87,8 +87,8 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`id`, `user_id`, `transaction_code`, `purchase_date`, `status_id`, `payment_mode_id`) VALUES
-(11, 4, 'transaction_number', '2019-01-15 18:33:37', 1, 1),
-(12, 4, 'C9169A4E1560A961-1547603020', '2019-01-15 18:43:40', 1, 1),
+(11, 4, 'transaction_number', '2019-01-15 18:33:37', 2, 1),
+(12, 4, 'C9169A4E1560A961-1547603020', '2019-01-15 18:43:40', 3, 1),
 (13, 4, '77BBA3569B92A3BD-1547603149', '2019-01-15 18:45:49', 1, 1),
 (14, 4, 'BB024F75189ABDF9-1547605429', '2019-01-15 19:23:49', 1, 1),
 (15, 4, '728D6174CC0D821A-1547605453', '2019-01-15 19:24:13', 1, 1),
@@ -330,7 +330,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `orders`
