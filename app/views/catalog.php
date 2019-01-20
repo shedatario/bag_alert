@@ -11,13 +11,13 @@ if(!isset($_SESSION['user']) || isset($_SESSION['user']) && $_SESSION['user']['r
 ?>
 
 
-	<div class="container">
+	<!-- <div class="container"> -->
 
-		<div class="row">
+		<div class="row no-gutters">
 
 			<!-- categories -->
-			<div class="col-sm-2 mt-3">
-				<h2> Categories </h2>
+			<div class="col-sm-2 p-2 mt-3">
+				<h2> Stylish Bags For Women</h2>
 				<ul class="list-group">
 					<a href="catalog.php" class="text-dark">
 						<li class="list-group-item bg-info">All</li>
@@ -79,7 +79,7 @@ if(!isset($_SESSION['user']) || isset($_SESSION['user']) && $_SESSION['user']['r
 					echo "<div class='row'>";
 
 					foreach ($items as $item) { ?>
-						<div class="col-sm-3">
+						<div class="col-sm-4">
 							<div class="card h-100">
 								<img class = "card-img-top" src="<?php echo $item['image_path']; ?>">
 								<div class="card-body">
@@ -106,14 +106,7 @@ if(!isset($_SESSION['user']) || isset($_SESSION['user']) && $_SESSION['user']['r
 			</div> <!-- end col -->
 		</div> <!-- end row -->
 
-
-
-		
-			
-				
-			
-
-	</div> <!-- end container -->
+	<!-- </div> end container -->
 
 <?php  }else{
 	header('location: ./error.php');

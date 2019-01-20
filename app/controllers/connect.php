@@ -1,7 +1,7 @@
 <?php
-	$host = 'db4free.net';
-	$username = 'sheree_ecom';
-	$password = 'she020695';
+	$host = "localhost";
+	$username = 'root';
+	$password = '';
 	$dbname = 'sheree_ecom_db';
 
 

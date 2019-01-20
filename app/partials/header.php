@@ -1,6 +1,6 @@
 
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<nav class="navbar navbar-expand-md">
     <a class="navbar-brand" href="#"> Store </a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-nav">
