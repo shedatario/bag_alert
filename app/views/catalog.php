@@ -19,8 +19,8 @@ if(!isset($_SESSION['user']) || isset($_SESSION['user']) && $_SESSION['user']['r
 			<div class="col-sm-2 p-2 mt-3">
 				<h2> Stylish Bags For Women</h2>
 				<ul class="list-group">
-					<a href="catalog.php" class="text-dark">
-						<li class="list-group-item bg-info">All</li>
+					<a href="catalog.php" class="text-light">
+						<li class="list-group-item bg-dark">All</li>
 					</a>
 
 					<?php
@@ -28,8 +28,8 @@ if(!isset($_SESSION['user']) || isset($_SESSION['user']) && $_SESSION['user']['r
 					$categories = mysqli_query($conn, $sql1);
 
 					foreach ($categories as $category) { ?>
-						<a class = "text-dark"href="catalog.php?category_id=<?php echo $category['id'] ; ?>">
-							<li class="list-group-item bg-info mt-1">
+						<a class = "text-light"href="catalog.php?category_id=<?php echo $category['id'] ; ?>">
+							<li class="list-group-item bg-dark mt-1">
 								<?php echo $category ['name'];  ?>
 							
 							</li>	
@@ -40,14 +40,14 @@ if(!isset($_SESSION['user']) || isset($_SESSION['user']) && $_SESSION['user']['r
 			<!-- sorting -->
 			<h2 class="mt-3">Sort</h2>
 			<ul class="list-group">
-				<a class = "text-dark" href="../controllers/sort.php?sort=asc">
-					<li class="list-group-item bg-info mt-1">
+				<a class = "text-light" href="../controllers/sort.php?sort=asc">
+					<li class="list-group-item bg-dark mt-1">
 						Price(lowest to highest)
 					</li>
 				</a>
 
-				<a class = "text-dark" href="../controllers/sort.php?sort=desc">
-					<li class="list-group-item bg-info mt-1" >
+				<a class = "text-light" href="../controllers/sort.php?sort=desc">
+					<li class="list-group-item bg-dark mt-1" >
 						Price(highest to lowest)
 					</li>
 				</a>
@@ -96,7 +96,7 @@ if(!isset($_SESSION['user']) || isset($_SESSION['user']) && $_SESSION['user']['r
 								<!-- add to cart -->
 								<div class="card-footer">
 									<input type="number" class="form-control" value="1">
-									<button type="submit" class="btn btn-block btn-outline-primary add-to-cart" data-id="<?php echo $item['id']; ?>"> Add to cart </button>
+									<button type="submit" class="btn btn-block btn-outline-dark add-to-cart" data-id="<?php echo $item['id']; ?>"> Add to cart </button>
 								</div> <!-- end card footer -->
 
 							</div> <!-- end card -->

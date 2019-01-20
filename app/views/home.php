@@ -21,8 +21,10 @@
 					
 					</div>
 					<div class="details">
-						<h1> example </h1>
-						<button>Shop Now</button>	
+						<h1> Bag Alert </h1>
+						<a href="./catalog.php">
+							<button class="btn btn-dark">Shop Now</button>	
+						</a>
 					</div>
 				</div>
 			</div> <!-- end col -->
